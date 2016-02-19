@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-//#import "DetailViewController.h"
-#import "MasterViewController.h"
+
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
@@ -18,6 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSLog(@"%@",[paths objectAtIndex:0]);
     // Override point for customization after application launch.
     /*UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];

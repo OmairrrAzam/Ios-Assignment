@@ -10,7 +10,7 @@
 		1898B7E61C776EFC00C40BD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898B7E51C776EFC00C40BD0 /* main.m */; };
 		1898B7E91C776EFC00C40BD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898B7E81C776EFC00C40BD0 /* AppDelegate.m */; };
 		1898B7EC1C776EFC00C40BD0 /* assignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1898B7EA1C776EFC00C40BD0 /* assignment.xcdatamodeld */; };
-		1898B7EF1C776EFC00C40BD0 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898B7EE1C776EFC00C40BD0 /* MasterViewController.m */; };
+		1898B7EF1C776EFC00C40BD0 /* OrganizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898B7EE1C776EFC00C40BD0 /* OrganizationViewController.m */; };
 		1898B7F51C776EFC00C40BD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1898B7F31C776EFC00C40BD0 /* Main.storyboard */; };
 		1898B7F71C776EFC00C40BD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1898B7F61C776EFC00C40BD0 /* Assets.xcassets */; };
 		1898B7FA1C776EFC00C40BD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1898B7F81C776EFC00C40BD0 /* LaunchScreen.storyboard */; };
@@ -50,8 +50,8 @@
 		1898B7E71C776EFC00C40BD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1898B7E81C776EFC00C40BD0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1898B7EB1C776EFC00C40BD0 /* assignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = assignment.xcdatamodel; sourceTree = "<group>"; };
-		1898B7ED1C776EFC00C40BD0 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		1898B7EE1C776EFC00C40BD0 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		1898B7ED1C776EFC00C40BD0 /* OrganizationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrganizationViewController.h; sourceTree = "<group>"; };
+		1898B7EE1C776EFC00C40BD0 /* OrganizationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrganizationViewController.m; sourceTree = "<group>"; };
 		1898B7F41C776EFC00C40BD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1898B7F61C776EFC00C40BD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1898B7F91C776EFC00C40BD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -189,8 +189,8 @@
 			children = (
 				1898B8271C77722100C40BD0 /* Clogin.h */,
 				1898B8281C77722100C40BD0 /* Clogin.m */,
-				1898B7ED1C776EFC00C40BD0 /* MasterViewController.h */,
-				1898B7EE1C776EFC00C40BD0 /* MasterViewController.m */,
+				1898B7ED1C776EFC00C40BD0 /* OrganizationViewController.h */,
+				1898B7EE1C776EFC00C40BD0 /* OrganizationViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -421,7 +421,7 @@
 			files = (
 				1898B8341C77753000C40BD0 /* User+CoreDataProperties.m in Sources */,
 				1898B8261C77710A00C40BD0 /* UserManager.m in Sources */,
-				1898B7EF1C776EFC00C40BD0 /* MasterViewController.m in Sources */,
+				1898B7EF1C776EFC00C40BD0 /* OrganizationViewController.m in Sources */,
 				1898B7E91C776EFC00C40BD0 /* AppDelegate.m in Sources */,
 				1898B8331C77753000C40BD0 /* Organization.m in Sources */,
 				1898B7EC1C776EFC00C40BD0 /* assignment.xcdatamodeld in Sources */,

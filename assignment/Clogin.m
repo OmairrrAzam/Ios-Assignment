@@ -8,8 +8,11 @@
 
 #import "Clogin.h"
 #import "UserManager.h"
-//#import "FBCDMasterViewController.h"
-@interface Clogin ()
+#import "User.h"
+#import "OrganizationViewController.h"
+@interface Clogin (){
+
+}
 
 @property (strong, nonatomic) UserManager *manager;
 
@@ -19,6 +22,7 @@
 @implementation Clogin
 @synthesize email;
 @synthesize pass;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,12 +41,14 @@
     
     email = self.tfEmail.text;
     pass = self.tfPass.text;
+    //cdFlag = self.cdFlagSwitch.on;
     
+    //NSLog(cdFlag? @"cd ative" : @"cd not active");
     if (!self.manager) {
         self.manager = [[UserManager alloc] init];
         self.manager.delegate = self;
     }
-    
+  
     [self.manager authenticateWithEmail:self.email password:self.pass];
     //self.btnLogin.loading = YES;
     //self.btnLogin.enabled = NO;
@@ -67,15 +73,15 @@
 - (void)userManager:(UserManager *)userManager didAuthenticateWithUser:(User *)user
                     organizations:(NSArray *)organizations{
     NSLog(@"i m in clogin.h in usermanater success delegate message");
-    //[user save];
+    [user save];
     
-    // UINavigationController *orgNavigator = [self.storyboard instantiateViewControllerWithIdentifier:@"Org_Nc"];
+     UINavigationController *orgNavigator = [self.storyboard instantiateViewControllerWithIdentifier:@"Org_Nc"];
     
-    /*FBCDMasterViewController *organizationsVC = (FBCDMasterViewController *)[orgNavigator.viewControllers objectAtIndex:0];
+    OrganizationViewController *organizationsVC = (OrganizationViewController *)[orgNavigator.viewControllers objectAtIndex:0];
     //organizationsVC.isInitialFlow = YES;
     organizationsVC.orgArray = organizations;
-    self.view.window.rootViewController = orgNavigator;*/
-    //AppDelegate *appDelegate = [AppDelegate globalDelegate];
+    self.view.window.rootViewController = orgNavigator;
+    //AppDelegate *appDelegate = [AppDelegate globalDelegate];*/
     
 }
 

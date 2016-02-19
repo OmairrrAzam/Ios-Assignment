@@ -12,8 +12,8 @@
     
     CoreDataStack *coreData = [[CoreDataStack alloc] init];
 
-   // NSLog(@"user :%@", email);
-   // NSLog(@"pss :%@", password);
+    NSLog(@"user :%@", email);
+    NSLog(@"pss :%@", password);
     // 1
     //NSString *string = [NSString stringWithFormat:@"%@users/authenticate/", BaseURLString];
     //NSURL *url = [NSURL URLWithString:string];
@@ -59,8 +59,13 @@
                 org.id          = [or valueForKey:@"id"];
                 org.name        = [or valueForKey:@"name"];
                 org.image_url    = [or valueForKey:@"image_url"];
-                org.desc        = [or valueForKey:@"description"];
-                org.country     = [or valueForKey:@"country"];
+                if ([or valueForKey:@"description"] != [NSNull null] ) {
+                    org.desc        =  [or valueForKey:@"description"] ;
+                }
+                if ([or valueForKey:@"country"] != [NSNull null]) {
+                    org.country     = [or valueForKey:@"country"];
+                }
+                
                 org.avatar      = [or valueForKey:@"avatar"];
                 
                 //connecting relationships

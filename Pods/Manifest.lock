@@ -20,11 +20,14 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - AJWValidator (0.0.8)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.2)
+  - AJWValidator
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  AJWValidator: ed00557b9cdcc38a8216aa9ddbd76b4eadb73615
 
 COCOAPODS: 0.39.0

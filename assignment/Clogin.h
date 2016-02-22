@@ -10,17 +10,13 @@
 #import "UserManager.h"
 
 @interface Clogin : UIViewController <UserManagerDelegate, UITextFieldDelegate> {
+    
     NSString *email;
     NSString *pass;
-   
+    
+    IBOutlet UISwitch *cDataFlag;
     
 }
 
-@property (readwrite) NSString* email;
-@property (readwrite) NSString* pass;
-@property (weak, nonatomic) IBOutlet UITextField *tfEmail;
-
-@property (weak, nonatomic) IBOutlet UITextField *tfPass;
-- (IBAction)btnLogin:(id)sender;
 
 @end

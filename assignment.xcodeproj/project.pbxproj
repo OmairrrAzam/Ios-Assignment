@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183239A11C7A5FC200079146 /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 183239A01C7A5FC200079146 /* TextFieldValidator.m */; };
 		1898B7E61C776EFC00C40BD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898B7E51C776EFC00C40BD0 /* main.m */; };
 		1898B7E91C776EFC00C40BD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898B7E81C776EFC00C40BD0 /* AppDelegate.m */; };
 		1898B7EC1C776EFC00C40BD0 /* assignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1898B7EA1C776EFC00C40BD0 /* assignment.xcdatamodeld */; };
@@ -24,6 +25,7 @@
 		1898B8341C77753000C40BD0 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898B82F1C77753000C40BD0 /* User+CoreDataProperties.m */; };
 		1898B8351C77753000C40BD0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898B8311C77753000C40BD0 /* User.m */; };
 		1898B8371C7778EF00C40BD0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1898B8361C7778EF00C40BD0 /* CoreData.framework */; };
+		1898B83A1C77BD5B00C40BD0 /* TMProfOrgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898B8391C77BD5B00C40BD0 /* TMProfOrgVC.m */; };
 		BA8D7B87D85ED2EFB9231015 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50005633343B0ED0F3FB5DED /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1832399F1C7A5FC200079146 /* TextFieldValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldValidator.h; sourceTree = "<group>"; };
+		183239A01C7A5FC200079146 /* TextFieldValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidator.m; sourceTree = "<group>"; };
 		1898B7E11C776EFC00C40BD0 /* assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1898B7E51C776EFC00C40BD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1898B7E71C776EFC00C40BD0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 		1898B8301C77753000C40BD0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		1898B8311C77753000C40BD0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		1898B8361C7778EF00C40BD0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1898B8381C77BD5B00C40BD0 /* TMProfOrgVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMProfOrgVC.h; sourceTree = "<group>"; };
+		1898B8391C77BD5B00C40BD0 /* TMProfOrgVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMProfOrgVC.m; sourceTree = "<group>"; };
 		50005633343B0ED0F3FB5DED /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC8E27F09CFC74347152C91 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B83902B69AC1C76DC6626503 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +115,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1832399E1C7A5FC200079146 /* TextFieldValidator */ = {
+			isa = PBXGroup;
+			children = (
+				1832399F1C7A5FC200079146 /* TextFieldValidator.h */,
+				183239A01C7A5FC200079146 /* TextFieldValidator.m */,
+			);
+			path = TextFieldValidator;
+			sourceTree = "<group>";
+		};
 		1898B7D81C776EFC00C40BD0 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +151,7 @@
 			children = (
 				1898B8231C7770B800C40BD0 /* CoreData */,
 				1898B8221C77709700C40BD0 /* Models */,
+				1832399E1C7A5FC200079146 /* TextFieldValidator */,
 				1898B8211C77709000C40BD0 /* Controllers */,
 				1898B8201C77708900C40BD0 /* Managers */,
 				1898B7E71C776EFC00C40BD0 /* AppDelegate.h */,
@@ -191,6 +207,8 @@
 				1898B8281C77722100C40BD0 /* Clogin.m */,
 				1898B7ED1C776EFC00C40BD0 /* OrganizationViewController.h */,
 				1898B7EE1C776EFC00C40BD0 /* OrganizationViewController.m */,
+				1898B8381C77BD5B00C40BD0 /* TMProfOrgVC.h */,
+				1898B8391C77BD5B00C40BD0 /* TMProfOrgVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -423,7 +441,9 @@
 				1898B8261C77710A00C40BD0 /* UserManager.m in Sources */,
 				1898B7EF1C776EFC00C40BD0 /* OrganizationViewController.m in Sources */,
 				1898B7E91C776EFC00C40BD0 /* AppDelegate.m in Sources */,
+				183239A11C7A5FC200079146 /* TextFieldValidator.m in Sources */,
 				1898B8331C77753000C40BD0 /* Organization.m in Sources */,
+				1898B83A1C77BD5B00C40BD0 /* TMProfOrgVC.m in Sources */,
 				1898B7EC1C776EFC00C40BD0 /* assignment.xcdatamodeld in Sources */,
 				1898B8351C77753000C40BD0 /* User.m in Sources */,
 				1898B8321C77753000C40BD0 /* Organization+CoreDataProperties.m in Sources */,

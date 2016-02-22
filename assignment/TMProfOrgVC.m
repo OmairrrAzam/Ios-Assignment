@@ -1,4 +1,4 @@
-//
+////
 //  TMProfOrgVC.m
 //  assignment
 //
@@ -10,12 +10,31 @@
 
 @interface TMProfOrgVC ()
 
+
 @end
 
 @implementation TMProfOrgVC
 
+@synthesize ivPic;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setTitle:[_organization objectForKey:@"name"]];
+    
+   
+    NSString *ImageURL = [self.organization objectForKey:@"image_url"];
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:ImageURL]];
+    self.ivPic.image = [UIImage imageWithData:imageData];
+    self.teDesc.text = [self.organization objectForKey:@"description"];
+   /* [self.ivPic setImageWithURLRequest:request
+                          placeholderImage:placeholderImage
+                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                       
+                                       weakCell.imageView.image = image;
+                                       [weakCell setNeedsLayout];
+                                       
+                                   } failure:nil];*/
     // Do any additional setup after loading the view.
 }
 

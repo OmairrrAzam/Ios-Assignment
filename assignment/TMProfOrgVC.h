@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface TMProfOrgVC : UIViewController
+@property (weak, nonatomic) IBOutlet UITextView *teDesc;
+@property (weak, nonatomic) IBOutlet UIImageView *ivPic;
 
+@property (nonatomic, readwrite) NSDictionary *organization;
 @end

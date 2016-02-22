@@ -27,8 +27,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use Core Data Only Switch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7et-2I-jqz">
+                                <rect key="frame" x="20" y="337" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GEA-jQ-Ikp">
+                                <rect key="frame" x="129" y="298" width="51" height="31"/>
+                                <connections>
+                                    <action selector="cDataFlag:" destination="BB5-eb-4Zw" eventType="valueChanged" id="470-XG-TKY"/>
+                                    <action selector="switchChanged:" destination="BB5-eb-4Zw" eventType="valueChanged" id="OtS-MG-R2q"/>
+                                </connections>
+                            </switch>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DCJ-Th-83C">
+                                <rect key="frame" x="20" y="192" width="280" height="29"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U5y-IB-jcd">
+                                <rect key="frame" x="20" y="255" width="280" height="29"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWg-z0-B5h">
-                                <rect key="frame" x="20" y="444" width="267" height="30"/>
+                                <rect key="frame" x="27" y="443" width="267" height="30"/>
                                 <color key="backgroundColor" red="0.40000000596046448" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,22 +62,13 @@
                                     <action selector="btnLogin:" destination="BB5-eb-4Zw" eventType="touchUpInside" id="1ir-Y8-jSb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use Core Data Only Switch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7et-2I-jqz">
-                                <rect key="frame" x="20" y="337" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q0T-MT-890">
-                                <rect key="frame" x="129" y="298" width="51" height="31"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GEA-jQ-Ikp">
-                                <rect key="frame" x="129" y="298" width="51" height="31"/>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="cDataFlag" destination="GEA-jQ-Ikp" id="db2-de-aP3"/>
+                        <outlet property="errorTextView" destination="DCJ-Th-83C" id="Ot0-yJ-qxX"/>
+                        <outlet property="errorTextViewPass" destination="U5y-IB-jcd" id="L6P-c8-DcH"/>
                         <outlet property="tfEmail" destination="aNU-rd-qZ0" id="RWG-gM-bc1"/>
                         <outlet property="tfPass" destination="D6L-TA-yiz" id="mVJ-O6-6ZI"/>
                     </connections>
@@ -61,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="-86" y="820"/>
         </scene>
-        <!--Your Organizations-->
+        <!--Organization View Controller-->
         <scene sceneID="4Wb-x2-9pE">
             <objects>
                 <tableViewController id="yzI-JI-dYb" customClass="OrganizationViewController" sceneMemberID="viewController">
@@ -70,10 +86,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="JAF-7C-xSl">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kaM-FE-QNh">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JAF-7C-xSl" id="gLg-RY-c1r">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kaM-FE-QNh" id="i7X-Ag-uRR">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
@@ -84,7 +100,18 @@
                             <outlet property="delegate" destination="yzI-JI-dYb" id="2Bj-eX-de1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Organizations" id="TlM-oT-mSL"/>
+                    <navigationItem key="navigationItem" id="TlM-oT-mSL">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" style="plain" id="Znq-vP-XyL">
+                            <inset key="imageInsets" minX="-3" minY="-1" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" red="0.40000000596046448" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="logout:" destination="yzI-JI-dYb" id="XcV-ia-IUD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Qbu-nC-xoh" kind="push" identifier="OrgProfile" id="sso-ay-B1f"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ga1-YY-2gc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="305" y="1122"/>
         </scene>
-        <!--View Controller-->
+        <!--Prof OrgVC-->
         <scene sceneID="oSO-zw-49d">
             <objects>
-                <viewController id="Qbu-nC-xoh" sceneMemberID="viewController">
+                <viewController id="Qbu-nC-xoh" customClass="TMProfOrgVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ol4-U9-ZAV"/>
                         <viewControllerLayoutGuide type="bottom" id="DWe-41-gzV"/>
@@ -118,22 +145,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sIc-hy-nV2">
-                                <rect key="frame" x="20" y="20" width="97" height="102"/>
+                                <rect key="frame" x="20" y="64" width="97" height="102"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="by8-cc-xwh">
-                                <rect key="frame" x="20" y="158" width="271" height="286"/>
+                                <rect key="frame" x="20" y="247" width="271" height="286"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xxo-EE-1it">
-                                <rect key="frame" x="125" y="20" width="145" height="102"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zEe-eU-rcI"/>
+                    <connections>
+                        <outlet property="ivPic" destination="sIc-hy-nV2" id="ZKH-1D-5qO"/>
+                        <outlet property="teDesc" destination="by8-cc-xwh" id="JsU-6A-ScH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEQ-Dr-74f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

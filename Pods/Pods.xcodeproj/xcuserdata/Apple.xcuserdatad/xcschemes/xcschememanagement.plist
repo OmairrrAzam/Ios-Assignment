@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AJWValidator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +27,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6D66FE7D3AD8963382F17E79643E1B8</key>
+		<key>73615AB1195988E96A2149E6ED019E40</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DD53F85956C126E9DE2F808E27B8A82</key>
 		<dict>
 			<key>primary</key>
 			<true/>

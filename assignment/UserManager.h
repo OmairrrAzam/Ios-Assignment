@@ -17,5 +17,5 @@
 
 @property (weak, nonatomic) id<UserManagerDelegate> delegate;
 
-- (void)authenticateWithEmail:(NSString *)email password:(NSString *)password ;
+- (void)authenticateWithEmail:(NSString *)email password:(NSString *)password cdataFlag:(BOOL)flag ;
 @end

@@ -9,8 +9,11 @@
 #import "OrganizationViewController.h"
 #import "Organization.h"
 //#import "DetailViewController.h"
+#import "TMProfOrgVC.h"
 
 @interface OrganizationViewController ()
+
+- (IBAction)logout:(id)sender;
 
 @end
 
@@ -33,19 +36,20 @@
 }
 
 
+
+
 #pragma mark - Segues
-/*
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    TMProfOrgVC *prof = segue.destinationViewController;
+    if([segue.identifier isEqualToString:@"OrgProfile"]){
+        
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
-        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-        controller.navigationItem.leftItemsSupplementBackButton = YES;
+       // UITableView *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        prof.organization = [orgArray objectAtIndex:indexPath.row];
     }
 }
-*/
+
 
 #pragma mark - Table View
 
@@ -64,19 +68,36 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    // Check for a reusable cell first, use that if it exists
+    UITableViewCell *cell =
+    [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+    // If there is no reusable cell of this type, create a new one
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc]
+                 initWithStyle:UITableViewCellStyleSubtitle
+                 reuseIdentifier:@"UITableViewCell"];
     }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    //UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                                    //reuseIdentifier:CellIdentifier];
+    
+    /*if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }*/
     
     // Configure the cell...
     // Organization *organization = [orgArray objectAtIndex:1];
      cell.textLabel.text = [[orgArray objectAtIndex:indexPath.row]valueForKey:@"name"];
-     cell.detailTextLabel.text = [[orgArray objectAtIndex:indexPath.row]valueForKey:@"country"];
+     //cell.detailTextLabel.text = [[orgArray objectAtIndex:indexPath.row]valueForKey:@"country"];
     
     return cell;
+}
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:@"OrgProfile" sender:(nil)];
 }
 
 /*
@@ -118,18 +139,10 @@
  }
  */
 
-#pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+
+
+- (IBAction)logout:(id)sender {
+    NSLog(@"Logout Button Clicked");
 }
-
-
 @end

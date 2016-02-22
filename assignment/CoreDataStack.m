@@ -16,29 +16,25 @@
 
 + (CoreDataStack*)sharedInstance
 {
-    // 1
+   
     static CoreDataStack *_sharedInstance = nil;
-    
-    // 2
     static dispatch_once_t oncePredicate;
-    
-    // 3
+
     dispatch_once(&oncePredicate, ^{
         _sharedInstance = [[CoreDataStack alloc] init];
     });
+    
     return _sharedInstance;
 }
 
 - (id)init
 {
-    // Call the superclass's designated initializer
     self = [super init];
-    // Did the superclass's designated initializer succeed?
+    
     if (self) {
-        // Give the instance variables initial values
         
     }
-    // Return the address of the newly initialized object
+    
     return self;
 }
 
@@ -48,8 +44,7 @@
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }

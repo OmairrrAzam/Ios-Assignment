@@ -22,20 +22,13 @@
     
     [self setTitle:[_organization objectForKey:@"name"]];
     
-   
     NSString *ImageURL = [self.organization objectForKey:@"image_url"];
     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:ImageURL]];
+    
     self.ivPic.image = [UIImage imageWithData:imageData];
     self.teDesc.text = [self.organization objectForKey:@"description"];
-   /* [self.ivPic setImageWithURLRequest:request
-                          placeholderImage:placeholderImage
-                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-                                       
-                                       weakCell.imageView.image = image;
-                                       [weakCell setNeedsLayout];
-                                       
-                                   } failure:nil];*/
-    // Do any additional setup after loading the view.
+    
+    // download this image to local directory as well .. This is yet to be done...
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,14 +36,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

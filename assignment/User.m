@@ -12,6 +12,7 @@
 @implementation User
 
 
+
 -(void)save{
     NSUserDefaults *nuDefault = [NSUserDefaults standardUserDefaults];
     [nuDefault setObject:self.email forKey:@"email_id"];

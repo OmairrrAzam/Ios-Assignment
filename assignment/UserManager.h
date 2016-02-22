@@ -8,6 +8,7 @@
 @protocol UserManagerDelegate
 
 @optional
+
 - (void)userManager:(UserManager *)userManager didAuthenticateWithUser:(User *)user  organizations:(NSArray *)organizations;
 - (void)userManager:(UserManager *)userManager didFailToAuthenticateWithMessage:(NSString *)message;
 

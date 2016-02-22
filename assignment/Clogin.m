@@ -41,14 +41,17 @@
     [super viewDidLoad];
     NSLog(@"Entered View Did Load of Login Controller");
     
+    //Validation Tracking Variables
     self.tfEmailValid = FALSE;
     self.tfPassValid = FALSE;
     
+    //initializing Validators
     self.emailValidator = [AJWValidator validatorWithType:AJWValidatorTypeString];
     [self.emailValidator addValidationToEnsurePresenceWithInvalidMessage:NSLocalizedString(@"This is required!", nil)];
     self.passValidator = [AJWValidator validatorWithType:AJWValidatorTypeString];
     [self.passValidator addValidationToEnsurePresenceWithInvalidMessage:NSLocalizedString(@"This is required!", nil)];
 
+    //Attaching Validators
     [self.tfEmail ajw_attachValidator:self.emailValidator];
     [self.tfPass ajw_attachValidator:self.passValidator];
     
@@ -72,7 +75,7 @@
 }
 
 
-#pragma mark - setting accessors 
+#pragma mark - setting accessors for Validators
 
 - (void)setEmailValidator:(AJWValidator *)validator
 {
@@ -81,6 +84,7 @@
     
     __typeof__(self) __weak weakSelf = self;
     
+    //Callback Block of state change of Email Validator
     _emailValidator.validatorStateChangedHandler = ^(AJWValidatorState newState) {
         
         switch (newState) {
@@ -179,9 +183,11 @@
     
     NSLog(@"Login Btn Clicked");
     
+    //Validating
     [self.emailValidator validate:self.tfEmail.text];
     [self.passValidator validate:self.tfPass.text];
     
+    //Getting Validated State
     if(!self.tfEmailValid || !self.tfPassValid){
         NSLog(@"Validation Failed");
         return;
@@ -202,16 +208,6 @@
 - (IBAction)cDataFlag:(id)sender {
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 
 #pragma mark - UserManagerDelegate Methods
